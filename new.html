@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Yaswanth Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <input type="text" id="username" placeholder="username">
+  <button onclick="login()">Login</button>
+  <p id="message"></p>
+
+  <script src="script.js"></script>
+  <nav id="navbar">
+    <ul>
+      <li><a href="#main-heading">About</a></li>
+      <li><a href="#languages">Languages</a></li>
+      <li><a href="#Experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#profiles">Profiles & Contact</a></li>
+    </ul>
+  </nav>
+
+  <h1 id="main-heading" class="fade-in">About Yaswanth</h1>
+  
+  <p class="fade-in">
+    Hi, I’m Yaswanth Raja, a passionate and curious learner currently pursuing my B.Tech in Electronics and Communication Engineering at Bharath Institute of Higher Education and Research.<br><br>
+    I’ve worked on several interesting projects. Recently, I built a backend micro web application using Flask and MySQL to manage employee data through REST APIs.<br><br>
+    I enjoy turning ideas into real working models—whether through code or hardware. I’m always eager to learn new technologies and build something meaningful.<br><br>
+    I'm excited about where this journey will take me next!
+  </p>
+
+  <div id="languages" class="grid">
+      <h3 class="section-heading">Languages</h3>
+      <ol class="language-list">
+        <li>Python</li>
+        <li>MySQL</li>
+        <li>Java</li>
+        <li>HTML</li>
+        <li>CSS</li>
+      </ol>
+  </div>
+  <div id="Experience" class="grid">
+    <h3 class="section-heading">Experience</h3> 
+    <ul>
+      <li>
+        <strong>Hashlog Solutions Private Limited, Chennai — Internship</strong><br>
+        I completed a 3-month internship where I gained insights into the company environment and
+        developed a REST API using Flask, utilizing Postman for testing and validation. The experience
+        helped me adapt to a collaborative workspace, improving my ability to work efficiently in a
+        professional setting.
+      </li>
+    </ul>
+  </div>
+
+  <div id="projects" class="grid">
+    <h3 class="section-heading">Projects</h3>
+    <ul>
+      <li>
+        <strong>Employees Management (REST API)</strong><br>
+        Built using Python Flask and MySQL and tested by Postman API.<br>
+        Developed a robust REST API for managing employee records.<br>
+        Ensured reliability and functionality by thoroughly testing endpoints using Postman.<br>
+        Designed the database schema and optimized queries to enhance performance.
+      </li>
+      <br>
+      <li>
+        <strong>Wireless Barcode and QR Code Scanner (ESP32)</strong><br>
+        Built using ESP32-CAM with Wi-Fi and Bluetooth, featuring an LCD interface for real-time display and cloud connectivity for data storage.<br>
+        Developed an IoT-enabled scanner for barcode and QR code recognition.<br>
+        Integrated ESP32-CAM to achieve high accuracy and fast processing for inventory and logistics applications.
+      </li>
+    </ul>
+  </div>
+
+<div id="tech-logos" class="fade-in">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="tech-logo" title="Python">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="tech-logo" title="Java">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="tech-logo" title="MySQL">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="tech-logo" title="HTML5">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="tech-logo" title="CSS3">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask" class="tech-logo" title="Flask">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Django_logo.svg" alt="Django" class="tech-logo" title="Django" style="width: 48px; height: 48px;">
+</div>
+
+
+  <div id="profiles" class="fade-in">
+    <h3 class="section-heading">Profiles & Contact</h3>
+    <br>
+    <a href="mailto:yaswanthraja47@gmail.com">Email</a><br>
+    <a href="tel:+918489289089">Mobile</a><br>
+    <a href="https://www.linkedin.com/in/yaswanth-rajasekar-a39752299/" target="_blank">LinkedIn Profile</a><br>
+    <a href="https://www.geeksforgeeks.org/user/yaswanthnraja/" target="_blank">GeeksforGeeks Profile</a><br>
+    <a href="https://leetcode.com/u/Yaswant_raja2/" target="_blank">LeetCode Profile</a><br>
+    <a href="https://github.com/Yaswanthraja28" target="_blank">GitHub Profile</a><br>
+  </div>
+  <script>
+  // Function to add 'visible' class on scroll using IntersectionObserver
+  document.addEventListener('DOMContentLoaded', () => {
+    const fadeEls = document.querySelectorAll('.fade-in');
+    const techLogos = document.querySelectorAll('.tech-logo');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    fadeEls.forEach(el => observer.observe(el));
+    techLogos.forEach(el => observer.observe(el));
+  });
+</script>
+
+</body>
+</html>
+
