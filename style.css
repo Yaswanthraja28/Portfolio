@@ -1,0 +1,268 @@
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #e0f7fa, #f1f8ff);
+  margin: 40px;
+  color: #333;
+  line-height: 1.6;
+}
+
+
+#navbar {
+  background-color: #53687c;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+#navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center ;
+  margin: 0;
+  padding: 0;
+}
+
+#navbar ul li {
+  margin: 0 15px;
+}
+
+#navbar ul li a {
+  color: rgb(220, 220, 220);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+#navbar ul li a:hover {
+  color: #93a01c;
+}
+
+
+h1#main-heading {
+  color: #3f0f0f;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+
+.section-heading {
+  font-weight: 500;
+  margin-top: 25px;
+  padding: 6px 14px;
+  display: inline-block;
+  border-radius: 6px;
+  color: rgb(0, 102, 204);
+  background-color: #d9dee3;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 17px;
+  padding: 10px 0;
+}
+
+ul, ol {
+  padding-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+
+a {
+  color: #003366;
+  text-decoration: none;
+  display: inline-block;
+  margin: 6px 0;
+  font-weight: 500;
+}
+
+a:hover {
+  color: #ac4f12;
+  text-decoration: underline;
+}
+
+
+#languages, #Experience, #projects, #profiles {
+  display: flex;
+  width: 100%;
+  margin: 40px 0;
+  align-items: center;
+}
+
+
+#languages, #projects {
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+
+#Experience {
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+}
+
+#profiles{
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+#languages > *, #Experience > *, #projects > *, #profiles > * {
+  background-color: #ffffff;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  width: 50%;
+  color: #333;
+}
+
+#projects h2 {
+  margin-top: 0;
+  color: rgb(0, 0, 0);
+}
+
+
+@media (max-width: 768px) {
+  #languages, #Experience, #projects, #profiles {
+    flex-direction: column !important;
+    
+  }
+
+  #languages > *, #Experience > *, #projects > *, #profiles > * {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+}
+
+#tech-logos {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px auto;
+  width: 60%;
+}
+
+.tech-logo {
+  width: 40px;
+  height: 40px;
+  filter: none;
+  cursor: default;
+  transition: transform 0.3s ease;
+}
+
+.tech-logo:hover {
+  transform: scale(1.2);
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Smooth hover for nav links */
+#navbar ul li a {
+  transition: color 0.4s ease, transform 0.3s ease;
+}
+
+#navbar ul li a:hover {
+  color: #43c8df;
+  transform: scale(1.1);
+}
+
+/* Smooth hover for project list items */
+#projects ul li {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+#projects ul li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(222, 157, 61, 0.3);
+}
+
+/* Smooth hover for profiles links */
+#profiles a {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#profiles a:hover {
+  color: #de9d3d;
+  transform: translateX(5px);
+}
+
+/* Fade-in tech logos with slight delay */
+.tech-logo {
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  cursor: pointer;
+}
+
+.tech-logo.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* General hover scale effect on the main section containers */
+#languages > *, 
+#Experience > *, 
+#projects > *, 
+#profiles > *,
+#tech-logos >  :hover  {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+#languages > *:hover, 
+#Experience > *:hover, 
+#projects > *:hover, 
+#profiles > *:hover,
+#tech-logos >  :hover  {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.grid {
+  display: flex;
+  gap: 25px;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+#tech-logos > .tech-logo:hover {
+  transform: scale(1.2);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-mode a {
+  color: #90caf9;
+}
